@@ -1,45 +1,62 @@
 This project was created, in part, with the assistance of generative AI (Gemini and Visual Studio Code Auto-complete).
 The following features were created in assistance with generative AI. Key word assistance. 
--style.css (Gemini AI)
-*".hitboxes{
+
+### `style.css` (Gemini AI)
+```css
+.hitboxes{
     position: fixed;
     font-size: 100px;
     z-index: 700;
     transform: translate(-50%, -50%);
-}"
-*"@keyframes fadeOut {
+}
+```
+```css
+@keyframes fadeOut {
     to {
         opacity: 0;
     }
-}"
-*"cursor: none !important;"
+}
+```
+```css
+cursor: none !important;
+```
 
--index.html (V.S. Autocomplete)
-*"<head>
+### `index.html` (V.S. Autocomplete)
+```html
+<head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>"
+</head>
+```
 
--game.html (V.S. Autocomplete)
-*"<head>
+### `game.html` (V.S. Autocomplete)
+```html
+<head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js" defer></script>
-</head>"
+</head>
+```
 
--script.js (Gemini AI)
-*"const shipRadius = 40;
-const orbRadius = 24;"
-*"const scoreVal = document.getElementById('score');
+### `script.js` (Gemini AI)
+```javascript
+const shipRadius = 40;
+const orbRadius = 24;
+```
+```javascript
+const scoreVal = document.getElementById('score');
 const altVal = document.getElementById('alt-value');
 const ship = document.querySelector('.ship-cursor');
-"
-*"const constrainedX = event.clientX < minX ? minX : event.clientX > maxX ? maxX : event.clientX;
+```
+```javascript
+const constrainedX = event.clientX < minX ? minX : event.clientX > maxX ? maxX : event.clientX;
 ship.style.left = `${constrainedX}px`;
-ship.style.top = `${event.clientY}px`;"
-*"    star.classList.add('star');
+ship.style.top = `${event.clientY}px`;
+```
+```javascript
+    star.classList.add('star');
     star.textContent = '⭐';
 
     const sizes = ['12px', '14px', '16px', '18px', '20px', '22px', '24px', '26px', '28px', '30px'];
@@ -51,8 +68,10 @@ ship.style.top = `${event.clientY}px`;"
         x: minXInit + Math.random() * (maxXInit - minXInit),
         y: Math.random() * window.innerHeight,
         vy: parseFloat(star.style.fontSize) * 0.15
-    });"
-*"    stars.forEach(star => {
+    });
+```
+```javascript
+    stars.forEach(star => {
         star.y += star.vy * speedMultiplier;
 
         if (star.y > window.innerHeight) {
@@ -77,7 +96,5 @@ ship.style.top = `${event.clientY}px`;"
 
             orb.y = -50;
             orb.x = minX + Math.random() * (max1 - minX);
-            "
-*"updateOrbs() function"
-  
-
+```
+`updateOrbs()` function

@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0; 
+}
+.introduction{
+    text-align: center;
+    font-family: arial;
+}
+
+.body{
+    background-color: gray;
+    height: 100vh;
+    width: 100vw;
+}
+
+.game{
+    height: 100vh;
+    width: 50vw;
+    cursor: none !important;
+    background-color: black;
+}
+.ship-cursor{
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-size: 96px;
+    pointer-events: none;
+    z-index: 1000;
+    margin-top: -16px;
+    margin-left: -16px;
+}
+
+.smoke{
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background-color: orange;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(0%, 300%);
+    filter: blur(4px);
+    animation: fadeOut 0.5s forwards;
+}
+.scoreboard {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    color: black;
+    font-size: 24px;
+    z-index: 1001;
+}
+
+.hitboxes{
+    position: fixed;
+    font-size: 100px;
+    pointer-events: none;
+    user-select: none;
+    z-index: 700;
+    transform: translate(-50%, -50%);
+}
+
+a, button {
+  cursor: pointer; 
+}
+
+.star{
+    position:fixed; 
+    color: white;
+    font-family: monospace;
+    pointer-events: none;
+    user-select: none;
+    z-index: 1;
+
+}
+
+
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
